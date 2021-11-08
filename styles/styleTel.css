@@ -99,6 +99,15 @@ main{
 .jules{
     margin: 40px;
     height: 300px;
+    content: url(../img/jules.jpg);
+}
+
+.julesAnim{
+    animation: dessin 3.5s linear forwards;
+}
+
+.julesAnim2{
+    animation: dessin2 3.5s linear forwards;
 }
 
 .ligne2{
@@ -108,6 +117,59 @@ main{
 
 .lettre{
     font-size: 60px;
+}
+
+.lettreAnim{
+    animation: lettre 3s ease-out infinite;
+}
+
+@keyframes lettre{
+    0%{
+        text-shadow: none;
+    }
+
+    50%{
+        text-shadow: none;
+        color: black;
+    }
+
+    75%{
+        text-shadow: rgb(214, 33, 33) 0 0 10px;
+        color: rgb(143, 55, 55);
+    }
+
+    100%{
+        text-shadow: none;
+        color: black;
+    }
+}
+
+@keyframes dessin{
+    0%{
+        content: url(../img/jules.jpg)
+    }
+
+    33%{
+        content: url(../img/gif1.gif)
+    }
+
+    100%{
+        content : url(../img/jules4.jpg)
+    }
+}
+
+@keyframes dessin2{
+    0%{
+        content: url(../img/jules4.jpg)
+    }
+
+    33%{
+        content: url(../img/gif2.gif)
+    }
+
+    100%{
+        content : url(../img/jules.jpg)
+    }
 }
 
 /* MENU */
