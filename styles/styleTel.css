@@ -1,0 +1,177 @@
+@font-face{
+    font-family: America;
+    src: url(/fonts/America-Regular.otf);
+}
+
+body{
+    margin: 0;
+    font-family: Poppins;
+}
+
+header{
+    padding: 10px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    background: rgb(0, 0, 0);
+}
+
+.nomPrenom{
+    font-family: America;
+    font-size: 30px;
+
+    color: white;
+}
+
+.burgerAbsolu{
+    position: fixed;
+
+    right: 10px;
+    top: 10px;
+
+    height: 50px;
+    width: 50px;
+
+    border-radius: 50%;
+    background: black;
+
+    z-index: 60;
+}
+
+.barreBurger{
+    position: absolute;
+
+    width: 30px;
+    height: 5px;
+
+    background: white;
+
+    border-radius: 25px;
+
+    transition: 0.3s;
+}
+
+.b1{
+    top: 13px;
+    left: 10px;
+}
+
+.b1croix{
+    transform: rotate(45deg);
+    top: 22.5px;
+    left: 8px;
+    width: 35px;
+}
+
+.b2{
+    top: 22.5px;
+    left: 10px;
+}
+
+.b2croix{
+    width: 0;
+    left: 25px;
+}
+
+.b3{
+    bottom: 13px;
+    left: 10px;
+}
+
+.b3croix{
+    transform: rotate(-45deg);
+    bottom: 22.5px;
+    left: 8px;
+    width: 35px;
+}
+
+main{
+    text-align: center;
+}
+
+.jules{
+    margin: 40px;
+    height: 300px;
+}
+
+h1{
+    margin: 0;
+}
+
+.ligne2{
+    display: block;
+    line-height: 40px;
+}
+
+.lettre{
+    font-size: 60px;
+}
+
+/* MENU */
+
+.menu{
+    position: fixed;
+    background: black;
+    color: white;
+
+    font-size: 20px;
+
+    top: 0;
+    bottom: 0;
+    left: 25%;
+    right: 0;
+
+    z-index: 50;
+    pointer-events: all;
+    
+    transform: translateX(100%);
+
+    transition: 0.4s;
+}
+
+.menu a{
+    text-decoration: none;
+    color: white;
+}
+
+.texteMenu{
+    padding: 60px 50px 10px;
+}
+
+.ligne{
+    height: 2px;
+    width: 50px;
+    background: white;
+
+    margin-left: 10px;
+}
+
+.croix{
+    position: absolute;
+
+    top: 20px;
+    right: 20px;
+
+    height: 30px;
+    width: 30px;
+}
+
+.menuVisible{
+    transform: translateX(0);
+}
+
+.filmMenu{
+    position: fixed;
+
+    background: rgba(0, 0, 0, 0.3);
+
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+
+    z-index: 1;
+
+    transition: 0.4s;
+}
