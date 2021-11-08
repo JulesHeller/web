@@ -11,6 +11,8 @@ body{
 header{
     padding: 10px 20px;
     display: flex;
+
+    height: 55px;
     justify-content: space-between;
     align-items: center;
 
