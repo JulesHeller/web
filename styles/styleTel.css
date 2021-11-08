@@ -17,6 +17,10 @@ header{
     background: rgb(0, 0, 0);
 }
 
+h1{
+    margin: 0;
+}
+
 .nomPrenom{
     font-family: America;
     font-size: 30px;
@@ -93,10 +97,6 @@ main{
 .jules{
     margin: 40px;
     height: 300px;
-}
-
-h1{
-    margin: 0;
 }
 
 .ligne2{
