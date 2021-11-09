@@ -2,8 +2,6 @@ var a = document.querySelector("#a");
 var z = document.querySelector("#z");
 var dessin = document.querySelector(".jules");
 
-a.classList.toggle("lettreAnim");
-
 document.querySelector(".lettreAnim").addEventListener("click", lettreAnim);
 
 function lettreAnim(){

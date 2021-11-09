@@ -103,11 +103,11 @@ main{
 }
 
 .julesAnim{
-    animation: dessin 3.5s linear forwards;
+    animation: dessin 3s linear forwards;
 }
 
 .julesAnim2{
-    animation: dessin2 3.5s linear forwards;
+    animation: dessin2 3s linear forwards;
 }
 
 .ligne2{
@@ -149,7 +149,7 @@ main{
         content: url(../img/jules.jpg)
     }
 
-    33%{
+    10%{
         content: url(../img/gif1.gif)
     }
 
@@ -163,7 +163,7 @@ main{
         content: url(../img/jules4.jpg)
     }
 
-    33%{
+    1%{
         content: url(../img/gif2.gif)
     }
 
