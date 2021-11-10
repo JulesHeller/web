@@ -5,8 +5,12 @@ var dessin = document.querySelector(".jules");
 document.querySelector(".lettreAnim").addEventListener("click", lettreAnim);
 
 function lettreAnim(){
+    document.querySelector(".lettreAnim").removeEventListener("click", lettreAnim);
     a.classList.toggle("lettreAnim");
     z.classList.toggle("lettreAnim");
+
+    document.querySelector(".lettreAnim").addEventListener("click", lettreAnim);
+
 }
 
 a.addEventListener("click", anim1);
