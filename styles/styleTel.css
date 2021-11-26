@@ -20,10 +20,6 @@ header{
     background: rgb(0, 0, 0);
 }
 
-h1{
-    margin: 0;
-}
-
 .nomPrenom{
     font-family: America;
     font-size: 30px;
@@ -64,21 +60,9 @@ h1{
     left: 10px;
 }
 
-.b1croix{
-    transform: rotate(45deg);
-    top: 22.5px;
-    left: 8px;
-    width: 35px;
-}
-
 .b2{
     top: 22.5px;
     left: 10px;
-}
-
-.b2croix{
-    width: 0;
-    left: 25px;
 }
 
 .b3{
@@ -86,10 +70,19 @@ h1{
     left: 10px;
 }
 
-.b3croix{
-    transform: rotate(-45deg);
-    bottom: 22.5px;
-    left: 8px;
+.menuOuvert .b1{
+    transform: translate(-2px, 10px) rotate(45deg);
+    width: 35px;
+}
+
+.menuOuvert .b2{
+    width: 0;
+    transform: translateX(15px);
+
+}
+
+.menuOuvert .b3{
+    transform: translate(-2px, -9px) rotate(-45deg);
     width: 35px;
 }
 
@@ -98,80 +91,138 @@ main{
 }
 
 .jules{
-    margin: 40px;
-    height: 300px;
-    content: url(../img/jules.jpg);
+    position: relative;
+
+    margin: 40px auto;
+
+    height: 302px;
+    width: 220px;
 }
 
-.julesAnim{
-    animation: dessin 3s linear forwards;
+.jules img{
+    position: absolute;
+    
+    top: 0;
+    left: 0;
+    height: 302px;
+    width: 220px;
+
+    transition: 0.8s;
 }
 
-.julesAnim2{
-    animation: dessin2 3s linear forwards;
+/* .slider{
+    -webkit-appearance: none;
+    appearance: none;
+
+    height: 15px;
+    width: 180px;
+    border-radius: 7.5px;
+
+    background: rgb(159, 159, 159);
 }
 
-.ligne2{
-    display: block;
-    line-height: 40px;
+.slider::-webkit-slider-thumb{
+    -webkit-appearance: none;
+    appearance: none;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+
+    background: rgb(0, 0, 0); 
+    cursor: pointer; 
 }
 
-.lettre{
-    font-size: 60px;
+.nombre{
+    margin: 20px auto;
+    width: 120px;
+    height: 80px;
+
+    font-size: 50px;
+    border-radius: 20px;
+    background: black;
+    color: white;
+} */
+
+/* Compatibilité avec Firefox */
+
+/* .slider::-moz-range-thumb{
+    width: 25px; 
+    height: 25px; 
+    border-radius: 50%;
+    
+    background: black; 
+    cursor: pointer; 
+} */
+
+.montre{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    margin: 20px auto;
+    width: 100px;
+    height: 100px;
+
+    border-radius: 50%;
+    background: white;
+    border: black 7px solid;
 }
 
-.lettreAnim{
-    animation: lettre 3s ease-out infinite;
+.montre2{
+    position: relative;
+
+    width: 92px;
+    height: 92px;
+
+    border-radius: 50%;
+    background: black;
 }
 
-@keyframes lettre{
-    0%{
-        text-shadow: none;
-    }
+.aiguille{
+    transform-origin: 4px 4px;
 
-    50%{
-        text-shadow: none;
-        color: black;
-    }
+    position: absolute;
 
-    75%{
-        text-shadow: rgb(214, 33, 33) 0 0 10px;
-        color: rgb(143, 55, 55);
-    }
+    background: white;
 
-    100%{
-        text-shadow: none;
-        color: black;
-    }
+    top: 42px;
+    left: 42px;
+
+    border-radius: 4px;
+
+    transition: 2s;
 }
 
-@keyframes dessin{
-    0%{
-        content: url(../img/jules.jpg)
-    }
-
-    10%{
-        content: url(../img/gif1.gif)
-    }
-
-    100%{
-        content : url(../img/jules4.jpg)
-    }
+.heure{
+    width: 8px;
+    height: 30px;
 }
 
-@keyframes dessin2{
-    0%{
-        content: url(../img/jules4.jpg)
-    }
-
-    1%{
-        content: url(../img/gif2.gif)
-    }
-
-    100%{
-        content : url(../img/jules.jpg)
-    }
+.minutes{
+    width: 40px;
+    height: 8px;
 }
+
+.montreAlt .heure{
+    width: 8px;
+    height: 30px;
+
+    transform: rotate(-360deg)
+}
+
+.montreAlt .minutes{
+    width: 40px;
+    height: 8px;
+
+    transform: rotate(-720deg)
+}
+
+.julesFlat .shad{
+    opacity: 0;
+}
+
+.jules img:nth-child(3) {transition-delay: 0.4s;}
+.jules img:nth-child(2) {transition-delay: 0.8s;}
 
 /* MENU */
 
@@ -222,11 +273,15 @@ main{
     width: 30px;
 }
 
-.menuVisible{
+.menuOuvert .menu{
     transform: translateX(0);
 }
 
-.filmMenu{
+.film{
+    transition: 0.4s;
+}
+
+.menuOuvert .film{
     position: fixed;
 
     background: rgba(0, 0, 0, 0.3);
@@ -237,6 +292,4 @@ main{
     right: 0;
 
     z-index: 1;
-
-    transition: 0.4s;
 }

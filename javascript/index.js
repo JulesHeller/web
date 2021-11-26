@@ -1,48 +1,32 @@
-var a = document.querySelector("#a");
-var z = document.querySelector("#z");
-var dessin = document.querySelector(".jules");
+// document.querySelector(".slider").addEventListener("input", updateValue);
 
-document.querySelector(".lettreAnim").addEventListener("click", lettreAnim);
+// function updateValue() {
+//     var slidVar = document.querySelector(".slider").value; 
+//     if (slidVar == 1)
+//     {
+//         slidVar = 0;
+//     }
 
-function lettreAnim(){
-    document.querySelector(".lettreAnim").removeEventListener("click", lettreAnim);
-    a.classList.toggle("lettreAnim");
-    z.classList.toggle("lettreAnim");
+//     var opacite = slidVar / 100
 
-    document.querySelector(".lettreAnim").addEventListener("click", lettreAnim);
+//     document.querySelector("#j1").style.opacity = opacite;
 
-}
+//     document.querySelector(".nombre").innerHTML = slidVar;
+// }
 
-a.addEventListener("click", anim1);
+document.querySelector(".montre").addEventListener("click", imgOpacity)
 
-function anim1(){
-    dessin.classList.remove("julesAnim2");
-    dessin.offsetTop;
-    dessin.classList.add("julesAnim");
-}
-
-z.addEventListener("click", anim2);
-
-function anim2(){
-    dessin.classList.remove("julesAnim");
-    dessin.offsetTop;
-    dessin.classList.add("julesAnim2");
+function imgOpacity() {
+    document.querySelector(".jules").classList.toggle("julesFlat")
+    
+    document.querySelector(".montre2").classList.toggle("montreAlt")
 }
 
 /* MENU */
 
-var burger = document.querySelector(".burgerAbsolu");
-var film = document.querySelector(".filmCache");
-var menu = document.querySelector(".menu");
+document.querySelector(".burgerAbsolu").addEventListener("click", showMenu);
+document.querySelector(".film").addEventListener("click", showMenu);
 
-burger.addEventListener("click", showMenu);
-film.addEventListener("click", showMenu);
-
-function showMenu(){
-    menu.classList.toggle("menuVisible");
-    film.classList.toggle("filmMenu");
-
-    burger.children[0].classList.toggle("b1croix");
-    burger.children[1].classList.toggle("b2croix");
-    burger.children[2].classList.toggle("b3croix"); 
+function showMenu() {
+    document.querySelector("body").classList.toggle("menuOuvert")
 }
