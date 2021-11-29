@@ -52,7 +52,7 @@ header{
 
     border-radius: 25px;
 
-    transition: 0.3s;
+    transition: .3s;
 }
 
 .b1{
@@ -107,7 +107,7 @@ main{
     height: 302px;
     width: 220px;
 
-    transition: 0.8s;
+    transition: .8s;
 }
 
 /* .slider{
@@ -165,7 +165,7 @@ main{
 
     border-radius: 50%;
     background: white;
-    border: black 7px solid;
+    border: grey 7px solid;
 }
 
 .montre2{
@@ -190,7 +190,7 @@ main{
 
     border-radius: 4px;
 
-    transition: 2s;
+    transition: 2s cubic-bezier(.2,.49,.5,.94);
 }
 
 .heure{
@@ -221,8 +221,8 @@ main{
     opacity: 0;
 }
 
-.jules img:nth-child(3) {transition-delay: 0.4s;}
-.jules img:nth-child(2) {transition-delay: 0.8s;}
+.jules img:nth-child(3) {transition-delay: .4s;}
+.jules img:nth-child(2) {transition-delay: .8s;}
 
 /* MENU */
 
@@ -243,7 +243,7 @@ main{
     
     transform: translateX(100%);
 
-    transition: 0.4s;
+    transition: .4s;
 }
 
 .menu a{
@@ -278,13 +278,13 @@ main{
 }
 
 .film{
-    transition: 0.4s;
+    transition: .4s;
 }
 
 .menuOuvert .film{
     position: fixed;
 
-    background: rgba(0, 0, 0, 0.3);
+    background: rgba(0, 0, 0, .3);
 
     top: 0;
     bottom: 0;
