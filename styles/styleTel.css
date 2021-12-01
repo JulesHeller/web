@@ -140,6 +140,8 @@ header{
     border: grey 7px solid;
 
     transition: 0.5s ease-in-out;
+
+    box-shadow: 0 0 20px rgba(0, 0, 0, .4);
 }
 
 .montreVisible{

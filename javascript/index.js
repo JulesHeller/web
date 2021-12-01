@@ -1,6 +1,7 @@
 /* Afficher Montre */
 
-document.querySelector(".nomPrenom").addEventListener("click", montrerMontre);
+document.querySelector("#j1").addEventListener("click", montrerMontre);
+document.querySelector("#j4").addEventListener("click", montrerMontre);
 
 function montrerMontre() {
     document.querySelector(".montre").classList.toggle("montreVisible")
