@@ -1,18 +1,12 @@
-// document.querySelector(".slider").addEventListener("input", updateValue);
+/* Afficher Montre */
 
-// function updateValue() {
-//     var slidVar = document.querySelector(".slider").value; 
-//     if (slidVar == 1)
-//     {
-//         slidVar = 0;
-//     }
+document.querySelector(".nomPrenom").addEventListener("click", montrerMontre);
 
-//     var opacite = slidVar / 100
+function montrerMontre() {
+    document.querySelector(".montre").classList.toggle("montreVisible")
+}
 
-//     document.querySelector("#j1").style.opacity = opacite;
-
-//     document.querySelector(".nombre").innerHTML = slidVar;
-// }
+/* Fonction Montre */
 
 document.querySelector(".montre").addEventListener("click", imgOpacity);
 
@@ -22,7 +16,7 @@ function imgOpacity() {
     document.querySelector(".montre2").classList.toggle("montreAlt");
 }
 
-/* MENU */
+/* Menu */
 
 document.querySelector(".burgerAbsolu").addEventListener("click", showMenu);
 document.querySelector(".film").addEventListener("click", showMenu);
