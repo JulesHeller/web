@@ -118,8 +118,10 @@ header{
 
     bottom: 0px;
 
-    height: 220px;
+    height: 30%;
     width: 100%;
+
+    pointer-events: none;
 }
 
 .montre{
@@ -131,20 +133,22 @@ header{
     align-items: center;
     justify-content: center;
 
-    margin: 20px auto;
-    width: 100px;
-    height: 100px;
+    margin: 0 20px;
+    width: 75px;
+    height: 75px;
 
     border-radius: 50%;
     background: white;
-    border: grey 7px solid;
+    border: grey 5px solid;
 
     transition: 0.5s ease-in-out;
 
-    box-shadow: 0 0 20px rgba(0, 0, 0, .4);
+    box-shadow: 0 3px 11px rgba(0, 0, 0, .3);
+
+    pointer-events: all;
 }
 
-.montreVisible{
+.clockBody .montre{
     transform: translateY(0);
 
     opacity: 1;
@@ -153,22 +157,22 @@ header{
 .montre2{
     position: relative;
 
-    width: 92px;
-    height: 92px;
+    width: 69px;
+    height: 69px;
 
     border-radius: 50%;
     background: black;
 }
 
 .aiguille{
-    transform-origin: 4px 4px;
+    transform-origin: 3px 3px;
 
     position: absolute;
 
     background: white;
 
-    top: 42px;
-    left: 42px;
+    top: 32px;
+    left: 32px;
 
     border-radius: 4px;
 
@@ -176,26 +180,20 @@ header{
 }
 
 .heure{
-    width: 8px;
-    height: 30px;
+    width: 6px;
+    height: 22px;
 }
 
 .minutes{
-    width: 40px;
-    height: 8px;
+    width: 30px;
+    height: 6px;
 }
 
 .montreAlt .heure{
-    width: 8px;
-    height: 30px;
-
     transform: rotate(-360deg)
 }
 
 .montreAlt .minutes{
-    width: 40px;
-    height: 8px;
-
     transform: rotate(-720deg)
 }
 
@@ -320,6 +318,32 @@ main{
 
     margin-left: 10px;
 }
+
+.portfolio{
+    transform: translateY(-10px);
+
+    width: 150px;
+    margin-left: 20px;
+
+    overflow: hidden;
+}
+
+.portfolio p{
+    margin: 10px 0;
+
+    opacity: 0;
+    transform: translateX(150px);
+    
+    transition: 1s;
+}
+
+.pfOuvert p{
+    opacity: 1;
+    transform: translateX(0);
+}
+
+.pfOuvert p:nth-child(2) {transition-delay: 0.15s;}
+.pfOuvert p:nth-child(3) {transition-delay: 0.3s;}
 
 .croix{
     position: absolute;
